@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #1e0033, #000000);
+  /* background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); */
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  position: relative;
+}
+
+.logo-area {
+  position: absolute;
+  left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.player-title {
+  color: #ffffff;
+  font-family: 'Audiowide', sans-serif;
+  font-size: 28px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  letter-spacing: 3px;
+}
+
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+
+.poster-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: -50px;
+}
+
+.poster-container img {
+  width: 550px;
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  width: 100%; 
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.song-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.song-details .mini-poster {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.song-details .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.artist-name {
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+.main-controls {
+  flex: 1;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.controls button img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1);
+}
+
+
+.volume-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume-controls img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+
+.volume-controls input {
+  width: 150px;
+  cursor: pointer;
+  accent-color: white;
+}
+
+
+

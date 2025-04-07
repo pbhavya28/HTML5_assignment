@@ -1,0 +1,11 @@
+step1.html -> https://p.ip.fi/3XzZ
+step2-forms.html -> https://p.ip.fi/0upZ
+github -> https://github.com/trainingfiles/valtech/tree/main/day1
+step3-outputs.html -> https://p.ip.fi/FblF / https://p.ip.fi/T1X1
+step7-meter.html -> https://p.ip.fi/hQA-
+step8-inputs.html -> https://p.ip.fi/JtU-
+step12-local-storage.html -> https://p.ip.fi/eQJM 
+step16-canvas.html -> https://p.ip.fi/NaYf
+step17-canvas-images.html -> https://p.ip.fi/pfFB
+step20-canvas-circle.html -> https://p.ip.fi/tRiQ
+7-pie-chart -> https://p.ip.fi/y9fS

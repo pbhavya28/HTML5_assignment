@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Player</title>
+  <link rel="stylesheet" href="/Assignments_of_HTML5 4/MediaPlayrer/style2.css" />
+
+</head>
+<body>
+  <div class="top-bar">
+    <div class="logo-area">
+      <a href="/Assignments_of_HTML5 4/MediaPlayrer/mediaPlayer.html"> 
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/logo.png" alt="Logo" class="logo-img" /></a>
+    </div>
+    <div class="player-title">BajaaNA</div> 
+  </div>
+
+  <div class="player-container">
+   
+    <div class="music-player" id="song1">
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/aajkiraat.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/aajkiraat.jpg" />
+          <div class="info">
+            <p class="song-title">Aaj Ki Raat</p>
+            <p class="artist-name">Sachin-Jigar</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls >
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/Aaj Ki Raat.mp3" type="audio/mp3"/>
+          </audio>
+          <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+     <div class="music-player" id="song2"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/jaane tu.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/jaane tu.jpg" />
+          <div class="info">
+            <p class="song-title">Jaane Tu</p>
+            <p class="artist-name">Arijit Singh</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio2" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/128-Jaane Tu - Chhaava 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div> 
+
+    <div class="music-player" id="song3"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/diditeardevardiwana.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/diditeardevardiwana.jpg" />
+          <div class="info">
+            <p class="song-title">Didi Tera Devar Diwana</p>
+            <p class="artist-name">Lata Mangeshkar</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/Didi Tera Devar Deewana - Hum Aapke Hain Koun - Hum Aapke Hain Koun 1994 128KBPS.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song4"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/o o jane jana.jpeg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/o o jane jana.jpeg" />
+          <div class="info">
+            <p class="song-title">O O Jaane Jaana</p>
+            <p class="artist-name">Kamaal Khan</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/128-O O Jaane Jaana - Pyaar Kiya To Darna Kya 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song5"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/rang.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/rang.jpg" />
+          <div class="info">
+            <p class="song-title">Rang</p>
+            <p class="artist-name">Satinder Sartaaj</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/128-Rang - Sky Force 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song6"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/legend.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/legend.jpg" />
+          <div class="info">
+            <p class="song-title">Legend</p>
+            <p class="artist-name">Sidhu Moose Wala</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autopla controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Punjabi/Legend - Sidhu Moose Wala.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song7"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/rideordie.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/rideordie.jpg" />
+          <div class="info">
+            <p class="song-title">Ride Or Die</p>
+            <p class="artist-name">Deep Jandue</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Punjabi/Ride or Die - Harvy Sandhu 128KBPS .mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song8"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/seeyouagain.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/seeyouagain.jpg" />
+          <div class="info">
+            <p class="song-title">See You Again</p>
+            <p class="artist-name">Wiz Khalifa</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/English/See You Again (PenduJatt.Com.Se).mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song9"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/perfect.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/perfect.jpg" />
+          <div class="info">
+            <p class="song-title">Perfect</p>
+            <p class="artist-name">Ed Sheeran</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/English/Perfect-(Mr-Jat.in).mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song10"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/baby.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/baby.jpg" />
+          <div class="info">
+            <p class="song-title">Baby</p>
+            <p class="artist-name">Justin Bieber</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/English/Baby (PenduJatt.Com.Se).mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song11"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/borntoshine.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/borntoshine.jpg" />
+          <div class="info">
+            <p class="song-title">Born To Shine</p>
+            <p class="artist-name">Diljit Dosanjh</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Punjabi/Born To Shine - Diljit Dosanjh.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song12"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/samebeaff.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/samebeaff.jpg" />
+          <div class="info">
+            <p class="song-title">Same Beef</p>
+            <p class="artist-name">Sidhu Moose Wala</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Punjabi/128-Same Beef - Bohemia, Sidhu Moose Wala 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song13"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/goat.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/goat.jpg" />
+          <div class="info">
+            <p class="song-title">Goat</p>
+            <p class="artist-name">Diljit Dosanjh</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Punjabi/128-GOAT - GOAT 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song14"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/taubatauba.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/taubatauba.jpg" />
+          <div class="info">
+            <p class="song-title">Tauba Tauba</p>
+            <p class="artist-name">Karan Aujla</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/128-Tauba Tauba - Bad Newz 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song15"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/softly.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/softly.jpg" />
+          <div class="info">
+            <p class="song-title">Softly</p>
+            <p class="artist-name">Karan Aujla</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" controls autoplay>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Punjabi/128-Softly - Making Memories 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song16"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/lethergo.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/lethergo.jpg" />
+          <div class="info">
+            <p class="song-title">Let Her Go </p>
+            <p class="artist-name">Passenger</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/English/Let Her Go-(SambalpuriStar.In).mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song17"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/leanon1.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/leanon1.jpg" />
+          <div class="info">
+            <p class="song-title">Lean On </p>
+            <p class="artist-name">Dj Snake</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/English/Lean On Mp3 Download DJ Snake, Major Lazer, MO.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song18"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/apnabanale.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/apnabanale.jpg" />
+          <div class="info">
+            <p class="song-title">Apna Bana Le Piya</p>
+            <p class="artist-name">Arijit Singh</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/Apna Bana Le.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song19"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/Tu-Cheez-Badi-Hain-Mast.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/Tu-Cheez-Badi-Hain-Mast.jpg" />
+          <div class="info">
+            <p class="song-title">Tu Tu-Cheez-Badi-Hain-Mast</p>
+            <p class="artist-name">Udit Narayan</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/128-Too Cheez Badi Hain (Duet Version) - Mohra 128 Kbps.mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+    <div class="music-player" id="song20"> 
+      <div class="poster-container">
+        <img src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/soull.jpg" alt="Song Poster" class="poster" />
+      </div>
+
+      <div class="bottom-bar">
+        <div class="song-details">
+          <img class="mini-poster" src="/Assignments_of_HTML5 4/MediaPlayrer/Posters/soull.jpg" />
+          <div class="info">
+            <p class="song-title">Soulmate</p>
+            <p class="artist-name">Badshah & Arijit Singh</p>
+          </div>
+        </div>
+
+        <div class="main-controls">
+          <audio id="audio" autoplay controls>
+            <source src="/Assignments_of_HTML5 4/MediaPlayrer/Hindi/Soulmate (PenduJatt.Com.Se).mp3"/>
+          </audio>
+           <div class="controls">
+            <button onclick="rewindAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/rewind-circle-fill.svg" alt="Rewind"></button>
+            <button id="pauseBtn" onclick="pauseAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/pause-circle-fill.svg" alt="Pause"></button>
+            <button id="playBtn" onclick="playAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/play-circle-fill.svg" alt="Play"></button>
+            <button onclick="stopAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/stop-circle-fill.svg" alt="Stop"></button>
+            <button onclick="fastForwardAudio()"><img src="/Assignments_of_HTML5 4/MediaPlayrer/fast-forward-circle-fill.svg" alt="Forward"></button>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img src="/Assignments_of_HTML5 4/MediaPlayrer/volume-up-fill.svg" alt="Volume" width="25" />
+          <input type="range" id="volumeSlider" min="0" max="100" value="100" oninput="setVolume(this.value)">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <!-- Script -->
+  <script>
+    function getURLParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+  
+    const songMap = {
+      "song1.mp3": "song1",
+      "song2.mp3": "song2",
+      "song3.mp3": "song3",
+      "song4.mp3": "song4",
+      "song5.mp3": "song5",
+      "song6.mp3": "song6",
+      "song7.mp3": "song7",
+      "song8.mp3": "song8",
+      "song9.mp3": "song9",
+      "song10.mp3": "song10",
+      "song11.mp3": "song11",
+      "song12.mp3": "song12",
+      "song13.mp3": "song13",
+      "song14.mp3": "song14",
+      "song15.mp3": "song15",
+      "song16.mp3": "song16",
+      "song17.mp3": "song17",
+      "song18.mp3": "song18",
+      "song19.mp3": "song19",
+      "song20.mp3": "song20",
+
+      
+    };
+  
+    const selectedSong = getURLParameter('song');
+    const songId = songMap[selectedSong];
+  
+    // Hide all songs 
+    document.querySelectorAll(".music-player").forEach(song => {
+      const audio = song.querySelector("audio");
+      
+      if (song.id !== songId) {
+        song.style.display = "none";
+  
+        // Stop any other audio
+        if (audio) {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      } else {
+        song.style.display = "block";
+  
+        // resume 
+        const storageKey = "lastPlayed_" + selectedSong;
+  
+       
+        window.addEventListener("DOMContentLoaded", () => {
+          if (!audio) return;
+  
+          const savedTime = localStorage.getItem(storageKey);
+          if (savedTime) {
+            audio.currentTime = parseFloat(savedTime);
+          }
+  
+          audio.addEventListener("timeupdate", () => {
+            localStorage.setItem(storageKey, audio.currentTime);
+          });
+  
+          audio.addEventListener("ended", () => {
+            localStorage.removeItem(storageKey);
+          });
+        });
+      }
+    });
+  
+    // Custom Controls 
+    function getSelectedAudio() {
+      const selectedPlayer = document.getElementById(songId);
+      return selectedPlayer ? selectedPlayer.querySelector("audio") : null;
+    }
+  
+    function playAudio() {
+      const audio = getSelectedAudio();
+      if (audio) audio.play();
+    }
+  
+    function pauseAudio() {
+      const audio = getSelectedAudio();
+      if (audio) audio.pause();
+    }
+  
+    function stopAudio() {
+      const audio = getSelectedAudio();
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    }
+  
+    function rewindAudio() {
+      const audio = getSelectedAudio();
+      if (audio) audio.currentTime -= 5;
+    }
+  
+    function fastForwardAudio() {
+      const audio = getSelectedAudio();
+      if (audio) audio.currentTime += 5;
+    }
+  
+    function setVolume(value) {
+      const audio = getSelectedAudio();
+      if (audio) audio.volume = value / 100;
+    }
+  </script>
+  
+</body>
+</html>

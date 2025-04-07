@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio API</title>
+</head>
+<body>
+   
+
+    <input onchange="changeVolume(this)" type="range" id="range" name="volume" min="0" max="1" step = "0.1" />
+
+    <audio id="audio" autoplay controls>
+        <source src = "media/enlivening.mp3">
+    </audio>
+
+    
+    <script>
+        function changeVolume(elm){
+        var audio = document.getElementById("audio");
+        var vol = document.getElementById(elm.type).value = elm.value;
+        audio.volume = vol; 
+        // audio.volume = document.getElementsByName("volume")[0].value; 
+        // audio.setAttribute("volume",document.getElementByName("volume").value)
+        console.log(audio.volume)
+        }
+    </script>
+</body>
+</html>

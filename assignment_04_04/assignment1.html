@@ -1,0 +1,122 @@
+<!-- New Employees Registration form without CSS
+Form must have Inputs for First Name, Last Name, eMail, select Gender, Age, Select   
+       City, Upload Resume using a file upload, accepted formats are  .doc, .docx, .pdf
+only, select position applying for, tentative date to join.
+Form must include dropdown menu, (from select and from datalist)
+Apply relevant built-in and custom validations   -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script>
+        function validateMe(){
+            document.getElementById("age").setCustomValidity("Please enter the age")
+        };
+        window.onload = validateMe;
+
+        function checkit(elm){
+            if(elm.value < 18){
+                elm.setCustomValidity("You are too young to join us");
+            }
+            else if(elm.value > 60){
+                elm.setCustomValidity("You are too old to join us");
+            }
+            else{
+                elm.setCustomValidity("");
+            }
+        };
+
+        function validateDate(){
+            var curr_date = new Date();
+            var currentdate = new Date(curr_date.getFullYear(),curr_date.getMonth(),curr_date.getDate());
+            var mydate = new Date(document.getElementById('joiningdate').value);
+
+            if(currentdate > mydate) {
+                document.getElementById('joiningdate').value = null;
+                alert("Enter the joining date of future");
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Application Form</h1>
+    <form method="get" action="#">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input required type="text" name="firstname" id="firstname"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input required type="text" name="lastname" id="lastname"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input required type="email" name="email"  id = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input required type="tel" placeholder="##########" pattern="[789][0-9]{9}" name="mobile" id = "mobile"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><select required name="gender" id="gender" style = "width: 147px;">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input oninput="checkit(this)" required type="number" min="18" max="60" name="age" id="age" style = "width: 140px;"></td>
+            </tr>
+            <tr>
+                <td>Resume</td>
+                <td><input required type="file" accept=".doc, .docx, .pdf " name="resume" id="resume"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input required type="search" list="city" placeholder="City">
+                    <datalist id="city">
+                        <option value="Ahmedabad">
+                        <option value="Jabalpur">
+                        <option value="Pune">
+                        <option value="Indore">
+                        <option value="Chennai">
+                        <option value="Banglore">
+                        <option value="Mumbai">
+                    </datalist></td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td><input required list="position" placeholder="Position">
+                    <datalist id="position">
+                        <option value="Junior Developer">
+                        <option value="Tech Lead">
+                        <option value="HR">
+                        <option value="Senior Manager">
+                    </datalist></td>
+            </tr>
+            <tr>
+                <td>Prefered Joining Date</td>
+                <td><input required oninput="validateDate()" type="date" name="joiningdate" id="joiningdate" style = "width: 142px;"></td>
+            </tr>
+            <br>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" id="submit" name="submit" value="Apply" style="width: 292px; height: 40px;">
+                </td>
+                
+            </tr>
+
+
+        </table>
+
+    </form>
+    
+</body>
+</html>

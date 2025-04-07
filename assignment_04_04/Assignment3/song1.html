@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song1</title>
+
+</head>
+<body>
+   
+
+    <input onchange="changeVolume(this)" type="range" id="range" name="volume" min="0" max="1" step = "0.1" />
+
+    <div id= "song1">
+    <audio id="audio" autoplay = "true" controls>
+        <source src = "media/song1.mp3">
+    </audio>
+    </div>
+    <div id= "song2">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song2.mp3">
+        </audio>
+    </div>
+    <div id= "song3">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song3.mp3">
+        </audio>
+    </div>
+    <div id= "song4">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song4.mp3">
+        </audio>
+    </div>
+    <div id= "song5">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song5.mp3">
+        </audio>
+    </div>
+    <div id= "song6">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song6.mp3">
+        </audio>
+    </div>
+    <div id= "song7">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song7.mp3">
+        </audio>
+    </div>
+    <div id= "song8">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song8.mp3">
+        </audio>
+    </div>
+    <div id= "song9">
+        <audio id="audio" autoplay controls>
+            <source src = "media/song9.mp3">
+        </audio>
+    </div>
+    <div id= "song10">
+        <audio id="audio" autoplay = "true" controls>
+            <source src = "media/song10.mp3">
+        </audio>
+    </div>
+    
+    <script>  
+     function getURLParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+        }
+        var option = getURLParameter('song');
+        document.write(option);
+        // if(option == "song1.mp3"){
+        //     document.getElementById("song2").setAttribute("style","visibility: hidden");
+        //     document.write("called called called")
+        // }
+        if(option == "song1.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 1){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song2.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 2){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song3.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 3){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song4.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 4){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song5.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 5){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song6.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 6){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song7.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 7){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song8.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 8){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song9.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 9){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+        if(option == "song10.mp3"){
+            for ( i = 1; i <=10; i++){
+                if( i != 10){        
+                    document.getElementById("song"+i).remove();
+                }
+            }
+        }
+
+
+
+
+     function changeVolume(elm){
+        var audio = document.getElementById("audio");
+        var vol = document.getElementById(elm.type).value = elm.value;
+        audio.volume = vol; 
+        // audio.volume = document.getElementsByName("volume")[0].value; 
+        // audio.setAttribute("volume",document.getElementByName("volume").value)
+        console.log(audio.volume)
+        }
+    </script>
+</body>
+</html>
